@@ -7,18 +7,23 @@ def insert_user():
 def option_invalid():
     print('Ingrese una opcion valida')
 
+def listar_usuarios():
+    User().listar_usuarios()
+
 def quit():
     return True
 
 options = """1) Agregar usuarios
 2) Borrar tabla
-3) Salir 
+3) Listar Usuarios
+4) Salir 
 => """
 
 functions = {
     '1':insert_user,
     '2':drop_table,
-    '3':quit
+    '3':listar_usuarios,
+    '4':quit
 }
 
 while True:

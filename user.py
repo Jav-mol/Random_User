@@ -26,7 +26,16 @@ class User():
             country = self.result[user]['location'].get('country')
             
             self.cargar_usuario(first,last,age,city,country)
-                
-    #def __str__(self) -> str:
-    #    return f'Usuario: {self.name} - {self.last_name} Age: {self.age} City: {self.city} Country: {self.country}'
+    
+    def listar_usuarios(self):
+        try:
+            query = "SELECT * FROM users"
 
+            with self.connection.cursor() as cursor:
+                cursor.execute(query)
+
+                for user in cursor.fetchall():
+                    print(user)
+
+        except Exception as e:
+            print(f'Error: {e}')
