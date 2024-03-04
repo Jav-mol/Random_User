@@ -1,3 +1,4 @@
+from config import password, user
 import pymysql
 
 DROP_TABLE = """ DROP TABLE IF EXISTS users; """
@@ -41,8 +42,8 @@ def create_connection():
             connect = pymysql.Connect(
                     host = "127.0.0.1",
                     port = 3306,
-                    user = 'root',
-                    password = 'JAVI2022',
+                    user = user,
+                    password = password,
                     db = 'Proyectos'
                 )
             create_table(connect)
