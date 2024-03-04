@@ -16,22 +16,21 @@ Borrar tabla de usuarios: Elimina la tabla de usuarios de la base de datos.
 ### Instalación ###
 Clona el repositorio a tu máquina local:
 
-¨¨¨bash
+```bash
 Copy code
 git clone https://github.com/tu_usuario/gestor-usuarios.git
-¨¨¨
+```
 Instala las dependencias utilizando pip:
-¨¨¨
+```bash
 Copy code
 pip install -r requirements.txt
-¨¨¨
+```
 Configura la conexión a tu base de datos MySQL en el archivo bd.py.
 
-Uso
 Ejecuta el script principal main.py:
-
-css
-Copy code
+```bash
 python main.py
+```
+
 Selecciona una opción del menú para agregar usuarios, listar usuarios, borrar la tabla de usuarios o salir del programa.
 
